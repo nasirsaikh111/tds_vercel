@@ -25,5 +25,3 @@ marks_data = {entry["name"]: entry["marks"] for entry in marks_list}
 def get_marks(name: list[str] = Query([])):
     result = [marks_data.get(n, None) for n in name]
     return {"marks": result}
-
-
